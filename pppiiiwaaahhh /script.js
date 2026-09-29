@@ -32,3 +32,4 @@ musicToggle.addEventListener('click', () => {
         isPlaying = true;
     }
 });
+ 
