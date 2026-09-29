@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayangku! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Google estetik -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Musik Latar (Sesuaikan nama file musik Anda di dalam folder musik) -->
+    <audio id="bg-music" loop>
+        <source src="musik/HBD.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+    </audio>
+
+    <!-- Halaman Pembuka (Amplop / Sambutan) -->
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-box">
+            <h1>Hai, Cantikku! ✨</h1>
+            <p>Ada sesuatu yang spesial nih buat kamu di hari ulang tahunmu.</p>
+            <button id="open-btn" class="btn">Buka Kejutan 💌</button>
+        </div>
+    </div>
+
+    <!-- Halaman Utama Website -->
+    <div id="main-content" class="screen hidden">
+        
+        <!-- Tombol Musik -->
+        <button id="music-toggle" class="music-btn">🎵 Putar Musik</button>
+
+        <!-- Bagian Judul / Hero -->
+        <header class="hero">
+            <h1>Happy Birthday, Sayang! 🎉</h1>
+            <p class="subtitle">Semua doa terbaik untukmu hari ini dan selamanya.</p>
+        </header>
+
+        <!-- Bagian Surat Cinta -->
+        <section class="card section-surat">
+            <h2>Pesan Spesial Untukmu 💌</h2>
+            <p id="typed-text">
+                Selamat ulang tahun ya sayangku! Terima kasih sudah jadi orang yang selalu nemenin aku di setiap keadaan. Semoga di umur yang baru ini, semua impian kamu tercapai, makin bahagia, dan kita bisa terus bareng-bareng ya. I love you so much! ❤️
+            </p>
+        </section>
+
+        <!-- Bagian Galeri Foto -->
+        <section class="section-gallery">
+            <h2>Kenangan Kita 📸</h2>
+            <div class="gallery-grid">
+                <!-- Ganti nama file foto sesuai dengan isi folder foto Anda -->
+                <div class="photo-card"><img src="foto/foto1.jpg" alt="Kenangan 1"><p>Momen seru kita ✨</p></div>
+                <div class="photo-card"><img src="foto/foto2.jpg" alt="Kenangan 2"><p>Senyum favorit aku 🥰</p></div>
+            </div>
+        </section>
+
+        <!-- Bagian Video -->
+        <section class="card section-video">
+            <h2>Video Spesial 🎥</h2>
+            <div class="video-container">
+                <!-- Ganti nama file video sesuai isi folder video Anda -->
+                <video controls>
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video.
+                </video>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with full of love ❤️ for you</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ff9a8b);
+    color: #4a3f35;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Layar Pembuka */
+.screen {
+    width: 100%;
+    max-width: 480px;
+}
+
+.welcome-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.welcome-box h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.btn, .music-btn {
+    background: #d81b60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+    transition: 0.3s;
+}
+
+.btn:active, .music-btn:active {
+    transform: scale(0.95);
+}
+
+/* Halaman Utama */
+#main-content {
+    max-width: 480px;
+    width: 100%;
+    background: #fffaf0;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    position: relative;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.music-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.8rem;
+    color: #d81b60;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2, .section-gallery h2 {
+    font-size: 1.1rem;
+    color: #d81b60;
+    margin-bottom: 12px;
+    border-bottom: 2px dashed #ffccd5;
+    padding-bottom: 5px;
+}
+
+.section-gallery {
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.photo-card {
+    min-width: 140px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.photo-card p {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 15px;
+}
