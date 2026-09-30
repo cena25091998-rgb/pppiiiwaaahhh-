@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: radial-gradient(circle at center, #2c1221 0%, #150912 100%);
+    color: #f3e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Latar Belakang Partikel Kelopak & Hati */
+.falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.falling-item {
+    position: absolute;
+    top: -30px;
+    animation: fallDown linear infinite;
+}
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Kartu Sambutan (Amplop Glamour Glassmorphism) */
+#welcome-screen {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.welcome-card {
+    background: rgba(45, 18, 35, 0.75);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 117, 160, 0.25);
+    padding: 45px 25px;
+    border-radius: 32px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 75, 120, 0.15);
+    position: relative;
+    overflow: hidden;
+    animation: scaleUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.glow-orb {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.envelope-badge {
+    display: inline-block;
+    background: rgba(255, 105, 180, 0.15);
+    color: #ff85b3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-card h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-card p {
+    font-size: 0.88rem;
+    color: #d1b8c8;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-glow {
+    background: linear-gradient(135deg, #ff3366 0%, #ff6b8b 100%);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 51, 102, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 51, 102, 0.8);
+}
+
+/* Tombol Musik Mengambang */
+.music-pill {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+    padding: 7px 16px;
+    font-size: 0.75rem;
+    background: rgba(45, 18, 35, 0.85);
+    color: #ff85b3;
+    border: 1px solid rgba(255, 105, 180, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.music-pill:hover {
+    background: rgba(65, 25, 50, 0.95);
+}
+
+/* Halaman Utama Album */
+#main-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 440px;
+    background: rgba(30, 12, 24, 0.82);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 117, 160, 0.2);
+    border-radius: 28px;
+    padding: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInMain 0.6s ease forwards;
+}
+
+@keyframes fadeInMain {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.header-tag {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff85b3;
+    font-weight: 600;
+}
+
+.app-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+.app-header .subtitle {
+    font-size: 0.75rem;
+    color: #b89db0;
+}
+
+/* Container Diary */
+.diary-container {
+    position: relative;
+    width: 100%;
+    min-height: 410px;
+    background: rgba(20, 7, 15, 0.6);
+    border-radius: 20px;
+    padding: 16px;
+    border: 1px solid rgba(255, 105, 180, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.story-card {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    animation: slideCard 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.story-card.active {
+    display: flex;
+}
+
+@keyframes slideCard {
+    from {
+        opacity: 0;
+        transform: translateX(35px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Bingkai Media */
+.media-frame {
+    width: 100%;
+    height: 205px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+}
+
+.media-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.media-frame img:hover {
+    transform: scale(1.04);
+}
+
+.media-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Kotak Teks Puitis */
+.text-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: #ff99cc;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.text-content p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #e2d1dc;
+    font-weight: 300;
+}
+
+/* Navigasi Bawah */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 4px;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #ff3366 0%, #ff6b8b 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 51, 102, 0.6);
+}
+
+.nav-btn:disabled {
+    background: rgba(255, 255, 255, 0.08);
+    color: #665260;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.indicator-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ff85b3;
+    background: rgba(255, 105, 180, 0.12);
+    padding: 5px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+/* Footer */
+.app-footer {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #8c7384;
+    margin-top: 12px;
+}
