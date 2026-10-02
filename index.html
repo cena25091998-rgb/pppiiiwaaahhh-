@@ -2,246 +2,98 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Queen Bee 👑❤️🐝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Buku Harian Suara & Rindu ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts Estetik -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Efek Latar Belakang Kelopak Bunga & Hati Berjatuhan -->
-    <div class="falling-container" id="falling-container"></div>
+    <!-- Efek Background Animasi Ramai -->
+    <div class="floating-effects">
+        <span class="fx-item" style="left: 5%; font-size: 24px; animation-duration: 6s; animation-delay: 0s;">💖</span>
+        <span class="fx-item" style="left: 20%; font-size: 16px; animation-duration: 8s; animation-delay: 2s;">✨</span>
+        <span class="fx-item" style="left: 35%; font-size: 22px; animation-duration: 5s; animation-delay: 1s;">💗</span>
+        <span class="fx-item" style="left: 50%; font-size: 18px; animation-duration: 7s; animation-delay: 3s;">⭐</span>
+        <span class="fx-item" style="left: 65%; font-size: 25px; animation-duration: 6s; animation-delay: 1.5s;">👑</span>
+        <span class="fx-item" style="left: 80%; font-size: 20px; animation-duration: 9s; animation-delay: 0.5s;">❤️</span>
+        <span class="fx-item" style="left: 92%; font-size: 15px; animation-duration: 7.5s; animation-delay: 2.5s;">✨</span>
+    </div>
 
-    <!-- Musik Latar Romantis -->
+    <!-- Musik Latar Lokal (HBD.mp3) -->
     <audio id="bg-music" loop>
-        <source src="https://files.catbox.moe/sbgpbs.mp3" type="audio/mpeg">
+        <source src="HBD.mp3" type="audio/mpeg">
         Browser Anda tidak mendukung audio.
     </audio>
 
-    <!-- Halaman Pembuka (Amplop Rahasia Eksklusif) -->
-    <div id="welcome-screen" class="screen">
-        <div class="welcome-card">
-            <div class="glow-orb"></div>
-            <div class="envelope-badge">👑 Khusus Ratu Hatiku, Bee</div>
-            <h1>Buku Harian Suara & Rindu ✨</h1>
-            <p>Meskipun raga kita terhalang jarak, suaramu dan manisnya senyummu di foto selalu berhasil membuatku jatuh cinta, ulang, dan ulang lagi, Bee.</p>
-            <button id="open-btn" class="btn-glow">Buka Kotak Hati Ini 💖</button>
+    <!-- Amplop Pembuka -->
+    <div id="envelope-overlay">
+        <div class="envelope-box">
+            <div class="envelope-icon">💌</div>
+            <h2>Untuk: Ratu Bee 👑</h2>
+            <p>Ada surat dan buku harian rindu khusus buat kamu. Silakan buka suratnya ya, Bee!</p>
+            <button id="open-btn" class="open-btn">Buka Surat ✨</button>
         </div>
     </div>
 
-    <!-- Halaman Utama Album Interaktif -->
-    <div id="main-content" class="screen hidden">
-        
-        <!-- Tombol Kontrol Musik Melayang -->
-        <button id="music-toggle" class="music-pill">🎵 Putar Musik</button>
-
-        <!-- Header Judul Elegan -->
-        <header class="app-header">
-            <span class="header-tag">👑❤️🐝 Special Long Distance Edition 🐝❤️👑</span>
-            <h1>Our Secret Sanctuary</h1>
-            <p class="subtitle">Geser perlahan, nikmati gombalan maut dan gema rindu khusus untuk Ratu Bee.</p>
-        </header>
-
-        <!-- Container Kartu Diary Interaktif -->
-        <div class="diary-container">
-
-            <!-- Card 1 -->
-            <div class="story-card active" data-index="1">
-                <div class="media-frame"><img src="https://files.catbox.moe/toposd.jpg" alt="Momen 1"></div>
-                <div class="text-content">
-                    <h2>01. Hari Lahirnya Sang Ratu 👑🌸</h2>
-                    <p class="typed-text">Selamat ulang tahun, Bee kesayanganku. Ngomong-ngomong, bumi ini beruntung banget ya hari ini, karena bidadari paling manis seantero galaksi dilahirkan ke dunia. Cie yang makin tua makin cantik! 🥰</p>
-                </div>
+    <!-- Konten Utama -->
+    <div id="main-website" class="hidden-content">
+        <div class="header-main">
+            <div class="header-card">
+                <span class="badge">👑 Khusus Ratu Hatiku, Bee</span>
+                <h1>Buku Harian Suara & Rindu ✨</h1>
+                <p>Meskipun raga terhalang jarak, suaramu selalu berhasil membuatku jatuh cinta lagi.</p>
             </div>
-
-            <!-- Card 2 -->
-            <div class="story-card" data-index="2">
-                <div class="media-frame"><img src="https://files.catbox.moe/sljkvj.jpg" alt="Momen 2"></div>
-                <div class="text-content">
-                    <h2>02. Candu Suara Sang Ratu Bee 🍯✨</h2>
-                    <p class="typed-text">Tau gak Bee? Suaramu itu mirip madu. Manis, bikin ketagihan, dan kalau sehari gak denger suaramu, rasanya duniaku langsung hambar kayak sayur kurang garam. Eak! 😆</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="story-card" data-index="3">
-                <div class="media-frame"><img src="https://files.catbox.moe/l0u3ci.jpg" alt="Momen 3"></div>
-                <div class="text-content">
-                    <h2>03. Hobi Baru: Nempel Terus Sama Kamu 🏡</h2>
-                    <p class="typed-text">Orang bilang jarak itu memisahkan. Tapi mereka gak tau sih, tiap telponan sama kamu berjam-jam, batre HP ku aja sampe menyerah, tapi hatiku tetep gak mau off dari kamu, Bee! 🤭</p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="story-card" data-index="4">
-                <div class="media-frame"><img src="https://files.catbox.moe/8ol41s.jpg" alt="Momen 4"></div>
-                <div class="text-content">
-                    <h2>04. Gembok Hati Khusus Buat Bee 🤍</h2>
-                    <p class="typed-text">Tau gak kenapa aku setia banget walau kita LDR? Karena kuncinya cuma satu, dan itu ada di senyumanmu. Mau jarak sejauh apa pun, GPS hatiku tetep mandeg di kamu doang. ❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="story-card" data-index="5">
-                <div class="media-frame"><img src="https://files.catbox.moe/56miwy.jpg" alt="Momen 5"></div>
-                <div class="text-content">
-                    <h2>05. Suara Tawa Paling Candu 🥰🐝</h2>
-                    <p class="typed-text">Gelak tawamu di ujung telepon itu koq bisa ya jadi candu terparah buat aku? Padahal cuma lewat suara, tapi sukses bikin aku senyam-senyum sendiri kayak orang kesurupan cinta. 🤪</p>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="story-card" data-index="6">
-                <div class="media-frame"><img src="https://files.catbox.moe/xl3t3u.jpg" alt="Momen 6"></div>
-                <div class="text-content">
-                    <h2>06. Modus Ingin Segera Bertemu 🗺️</h2>
-                    <p class="typed-text">Sering banget aku ngelamun, kapan ya bisa meluk kamu langsung? Biar gak perlu lewat layar HP lagi. Duh, kalau ketemu nanti, awas aja ya kamu gak bakal aku bolehin pulang! Hahaha. 😜</p>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-            <div class="story-card" data-index="7">
-                <div class="media-frame"><img src="https://files.catbox.moe/jlm3df.jpg" alt="Momen 7"></div>
-                <div class="text-content">
-                    <h2>07. Tempat Rebahan Paling Nyaman 🤝</h2>
-                    <p class="typed-text">Buat aku, rumah itu bukan cuma tempat tidur, Bee. Rumah yang sebenarnya itu ya saat aku lagi ngobrol bareng kamu, tempat di mana semua lelahku langsung ilang seketika. ✨</p>
-                </div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="story-card" data-index="8">
-                <div class="media-frame"><img src="https://files.catbox.moe/75gzyv.jpg" alt="Momen 8"></div>
-                <div class="text-content">
-                    <h2>08. Waktu Kok Bisa Cemburu Sih? ⏳</h2>
-                    <p class="typed-text">Setiap kali telponan sama kamu, jam dinding rasanya hobi banget lari cepat. Baru juga ngobrol sebentar, eh tau-tau udah subuh aja. Kamu sih, pesonanya gak ada obat! 👑</p>
-                </div>
-            </div>
-
-            <!-- Card 9 -->
-            <div class="story-card" data-index="9">
-                <div class="media-frame"><img src="https://files.catbox.moe/3xittf.jpg" alt="Momen 9"></div>
-                <div class="text-content">
-                    <h2>09. Pawang Rindunya Bee 🌷</h2>
-                    <p class="typed-text">Emang sih rindu LDR itu berat, Dilan aja bakal kalah kuat kalau ngadepin rinduku ke kamu. Tapi tenang, pawangnya kan Ratu Bee yang paling cantik, jadi aku kuat-kuat aja kok! 💪❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 10 -->
-            <div class="story-card" data-index="10">
-                <div class="media-frame"><img src="https://files.catbox.moe/kkvhjj.jpg" alt="Momen 10"></div>
-                <div class="text-content">
-                    <h2>10. Pameran Kecantikan Ratu Bee 💫</h2>
-                    <p class="typed-text">Tolong, ini yang punya foto tolong dikondisikan cantiknya, jangan kelewatan gitu dong! Mau pingsan rasanya tiap liat muka kamu di galeri HP-ku. Gemes banget sih jadi pacar orang! 🐝✨</p>
-                </div>
-            </div>
-
-            <!-- Card 11 -->
-            <div class="story-card" data-index="11">
-                <div class="media-frame"><img src="https://files.catbox.moe/t2urx5.jpg" alt="Momen 11"></div>
-                <div class="text-content">
-                    <h2>11. Doa Tulus Si Buaya Cinta 🎂</h2>
-                    <p class="typed-text">Di hari spesialmu ini, doaku simpel tapi dalem: semoga kamu makin sayang sama aku, makin murung kalau gak denger suaraku, dan kita langgeng terus sampe kakek-nenek ya, Bee! 🤲❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 12 -->
-            <div class="story-card" data-index="12">
-                <div class="media-frame"><img src="https://files.catbox.moe/1v4612.jpg" alt="Momen 12"></div>
-                <div class="text-content">
-                    <h2>12. Obat Ganteng Pas Lagi Kangen 📸</h2>
-                    <p class="typed-text">Foto ini resmi jadi kartu sakti penangkal rindu buat aku. Kalau lagi kangen tapi kamu lagi sibuk, aku tinggal lihat foto ini sambil bayangin kamu ngomel-ngomel lucu. Hahaha. 🤭</p>
-                </div>
-            </div>
-
-            <!-- Card 13 -->
-            <div class="story-card" data-index="13">
-                <div class="media-frame"><img src="https://files.catbox.moe/z477ig.jpg" alt="Momen 13"></div>
-                <div class="text-content">
-                    <h2>13. Langit Beda, Hati Tetap Satu 💍</h2>
-                    <p class="typed-text">Meskipun kita mandangin langit dari kota yang beda, sumpah deh, hatiku cuma mangkal di satu tempat: di hatinya Ratu Bee yang paling manis sedunia. Cailah! 👑🐝</p>
-                </div>
-            </div>
-
-            <!-- Card 14 -->
-            <div class="story-card" data-index="14">
-                <div class="media-frame"><img src="https://files.catbox.moe/yx9twc.jpg" alt="Momen 14"></div>
-                <div class="text-content">
-                    <h2>14. Nyaman Banget, Mau Pindah KTP Saja 🌿</h2>
-                    <p class="typed-text">Kalau ada pilihan pindah domisili, aku mau pindah KTP ke dalam hatimu aja, Bee. Biar statusnya resmi jadi warga tetap yang paling dicintai kamu. Mau gak nerima aku? 😜❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 15 -->
-            <div class="story-card" data-index="15">
-                <div class="media-frame"><img src="https://files.catbox.moe/jt571v.jpg" alt="Momen 15"></div>
-                <div class="text-content">
-                    <h2>15. Persiapan Mental Buat Nonton Video 🎬</h2>
-                    <p class="typed-text">Sesi foto udah kelar nih, Bee. Sekarang siap-siap mental ya, karena di slide berikutnya ada video gemesin dari sang Ratu yang siap bikin jantung aku diskoan! Yuk lanjut! 💃✨</p>
-                </div>
-            </div>
-
-            <!-- Card 16 (Video 1) -->
-            <div class="story-card" data-index="16">
-                <div class="media-frame video-frame">
-                    <video controls playsinline><source src="https://files.catbox.moe/d4rj5c.mp4" type="video/mp4"></video>
-                </div>
-                <div class="text-content">
-                    <h2>16. Aksi Maut Ratu Bee di Layar 🎥👑</h2>
-                    <p class="typed-text">Tuh kan, baru diputer aja videonya langsung bikin salah tingkah sendiri. Kamu ini emang sengaja ya mau bikin aku bucin akut tiap hari, Bee? Parah sih gemesinnya! 🐝❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 17 (Video 2) -->
-            <div class="story-card" data-index="17">
-                <div class="media-frame video-frame">
-                    <video controls playsinline><source src="https://files.catbox.moe/frjbke.mp4" type="video/mp4"></video>
-                </div>
-                <div class="text-content">
-                    <h2>17. Bikin Jantung Copot Sesi Kedua 🎞️</h2>
-                    <p class="typed-text">Gimana aku gak makin sayang kalau liat video inian? Kamu tuh definisi paket komplit: suaranya madu, mukanya manis, sayangnya juga ke aku kan? (Harus jawab iya! Haha). 😆</p>
-                </div>
-            </div>
-
-            <!-- Card 18 (Video 3) -->
-            <div class="story-card" data-index="18">
-                <div class="media-frame video-frame">
-                    <video controls playsinline><source src="https://files.catbox.moe/f1348k.mp4" type="video/mp4"></video>
-                </div>
-                <div class="text-content">
-                    <h2>18. Bukti Nyata Bidadari Tanpa Sayap ✨</h2>
-                    <p class="typed-text">Fix, malaikat di surga pasti iri liat ciptaan terindah yang lagi ultah hari ini. Makasih ya Bee udah sudi milih buaya bucin kayak aku buat jadi pawang hatimu. 👑❤️</p>
-                </div>
-            </div>
-
-            <!-- Card 19 (Video 4 / Penutup) -->
-            <div class="story-card" data-index="19">
-                <div class="media-frame video-frame">
-                    <video controls playsinline><source src="https://files.catbox.moe/b0eg1t.mp4" type="video/mp4"></video>
-                </div>
-                <div class="text-content">
-                    <h2>19. Selamanya Jadi Ratu Hatiku 👑❤️🐝</h2>
-                    <p class="typed-text">Selamat ulang tahun sekali lagi, Ratu Bee kesayanganku! Tetap jadi pacar yang gemesin, cerewet, dan sayang sama aku ya. I love you so much, Queen Bee-ku! Sampai jumpa di hari pertemuan kita nanti! ✨🥂</p>
-                </div>
-            </div>
-
         </div>
 
-        <!-- Tombol Navigasi Estetik -->
-        <div class="nav-wrapper">
-            <button id="prev-btn" class="nav-btn" onclick="changeSlide(-1)" disabled>⬅ Sebelumnya</button>
-            <span id="page-indicator" class="indicator-badge">1 / 19</span>
-            <button id="next-btn" class="nav-btn" onclick="changeSlide(1)">Selanjutnya ➡️</button>
-        </div>
+        <main>
+            <div class="sanctuary-header">
+                <span>👑❤️🐝 Special Long Distance Edition 🐝❤️👑</span>
+                <h2>Our Secret Sanctuary</h2>
+            </div>
 
-        <!-- Footer -->
-        <footer class="app-footer">
-            <p>Crafted with eternal devotion & passion 👑❤️🐝</p>
+            <!-- Kontainer Kartu 1 sampai 19 -->
+            <div class="card-container">
+                <div class="card active"><div class="card-media"><img alt="Momen 1" src="foto 1.jpg"></div><div class="card-content"><h3>01. Hari Lahirnya Sang Ratu 👑🌸</h3><p>Selamat ulang tahun, Bee kesayanganku. Ngomong-ngomong, bumi ini beruntung banget ya hari ini, karena bidadari paling manis seantero galaksi dilahirkan ke dunia. Cie yang makin tua makin cantik! 🥰</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 2" src="foto 2.jpg"></div><div class="card-content"><h3>02. Candu Suara Sang Ratu Bee 🍯✨</h3><p>Tau gak Bee? Suaramu itu mirip madu. Manis, bikin ketagihan, dan kalau sehari gak denger suaramu, rasanya duniaku langsung hambar kayak sayur kurang garam. Eak! 😆</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 3" src="foto 3.jpg"></div><div class="card-content"><h3>03. Hobi Baru: Nempel Terus Sama Kamu 🏡</h3><p>Orang bilang jarak itu memisahkan. Tapi mereka gak tau sih, tiap telponan sama kamu berjam-jam, batre HP ku aja sampe menyerah, tapi hatiku tetep gak mau off dari kamu, Bee! 🤭</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 4" src="foto 4.jpg"></div><div class="card-content"><h3>04. Gembok Hati Khusus Buat Bee 🤍</h3><p>Tau gak kenapa aku setia banget walau kita LDR? Karena kuncinya cuma satu, dan itu ada di senyumanmu. Mau jarak sejauh apa pun, GPS hatiku tetep mandeg di kamu doang. ❤️</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 5" src="foto 5.jpg"></div><div class="card-content"><h3>05. Suara Tawa Paling Candu 🥰🐝</h3><p>Gelak tawamu di ujung telepon itu koq bisa ya jadi candu terparah buat aku? Padahal cuma lewat suara, tapi sukses bikin aku senyam-senyum sendiri kayak orang kesurupan cinta. 🤪</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 6" src="foto 6.jpg"></div><div class="card-content"><h3>06. Modus Ingin Segera Bertemu 🗺️</h3><p>Sering banget aku ngelamun, kapan ya bisa meluk kamu langsung? Biar gak perlu lewat layar HP lagi. Duh, kalau ketemu nanti, awas aja ya kamu gak bakal aku bolehin pulang! Hahaha. 😜</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 7" src="foto 7.jpg"></div><div class="card-content"><h3>07. Tempat Rebahan Paling Nyaman 🤝</h3><p>Buat aku, rumah itu bukan cuma tempat tidur, Bee. Rumah yang sebenarnya itu ya saat aku lagi ngobrol bareng kamu, tempat di mana semua lelahku langsung ilang seketika. ✨</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 8" src="foto 8.jpg"></div><div class="card-content"><h3>08. Waktu Kok Bisa Cemburu Sih? ⏳</h3><p>Setiap kali telponan sama kamu, jam dinding rasanya hobi banget lari cepat. Baru juga ngobrol sebentar, eh tau-tau udah subuh aja. Kamu sih, pesonanya gak ada obat! 👑</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 9" src="foto 9.jpg"></div><div class="card-content"><h3>09. Pawang Rindunya Bee 🌷</h3><p>Emang sih rindu LDR itu berat, Dilan aja bakal kalah kuat kalau ngadepin rinduku ke kamu. Tapi tenang, pawangnya kan Ratu Bee yang paling cantik, jadi aku kuat-kuat aja kok! 💪❤️</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 10" src="foto 10.jpg"></div><div class="card-content"><h3>10. Pameran Kecantikan Ratu Bee 💫</h3><p>Tolong, ini yang punya foto tolong dikondisikan cantiknya, jangan kelewatan gitu dong! Mau pingsan rasanya tiap liat muka kamu di galeri HP-ku. Gemes banget sih jadi pacar orang! 🐝✨</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 11" src="foto 11.jpg"></div><div class="card-content"><h3>11. Doa Tulus Si Buaya Cinta 🎂</h3><p>Di hari spesialmu ini, doaku simpel tapi dalem: semoga kamu makin sayang sama aku, makin murung kalau gak denger suaraku, dan kita langgeng terus sampe kakek-nenek ya, Bee! 🤲❤️</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 12" src="foto 12.jpg"></div><div class="card-content"><h3>12. Obat Ganteng Pas Lagi Kangen 📸</h3><p>Foto ini resmi jadi kartu sakti penangkal rindu buat aku. Kalau lagi kangen tapi kamu lagi sibuk, aku tinggal lihat foto ini sambil bayangin kamu ngomel-ngomel lucu. Hahaha. 🤭</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 13" src="foto 13.jpg"></div><div class="card-content"><h3>13. Langit Beda, Hati Tetep Satu 💍</h3><p>Meskipun kita mandangin langit dari kota yang beda, sumpah deh, hatiku cuma mangkal di satu tempat: di hatinya Ratu Bee yang paling manis sedunia. Cailah! 👑🐝</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 14" src="foto 14.jpg"></div><div class="card-content"><h3>14. Nyaman Banget, Mau Pindah KTP Saja 🌿</h3><p>Kalau ada pilihan pindah domisili, aku mau pindah KTP ke dalam hatimu aja, Bee. Biar statusnya resmi jadi warga tetap yang paling dicintai kamu. Mau gak nerima aku? 😜❤️</p></div></div>
+                <div class="card"><div class="card-media"><img alt="Momen 15" src="foto 15.jpg"></div><div class="card-content"><h3>15. Persiapan Mental Buat Nonton Video 🎬</h3><p>Sesi foto udah kelar nih, Bee. Sekarang siap-siap mental ya, karena di slide berikutnya ada video gemesin dari sang Ratu yang siap bikin jantung aku diskoan! Yuk lanjut! 💃✨</p></div></div>
+                
+                <!-- Video Lokal dengan Atribut AutoPlay, Muted, dan Controls -->
+                <div class="card"><div class="card-media"><video autoplay muted loop playsinline controls><source src="VID-20260611-WA0024(1).mp4" type="video/mp4"></video></div><div class="card-content"><h3>16. Aksi Maut Ratu Bee di Layar 🎥👑</h3><p>Tuh kan, baru diputer aja videonya langsung bikin salah tingkah sendiri. Kamu ini emang sengaja ya mau bikin aku bucin akut tiap hari, Bee? Parah sih gemesinnya! 🐝❤️</p></div></div>
+                <div class="card"><div class="card-media"><video autoplay muted loop playsinline controls><source src="VID-20260611-WA0024.mp4" type="video/mp4"></video></div><div class="card-content"><h3>17. Bikin Jantung Copot Sesi Kedua 🎞️</h3><p>Gimana aku gak makin sayang kalau liat video inian? Kamu tuh definisi paket komplit: suaranya madu, mukanya manis, sayangnya juga ke aku kan? (Harus jawab iya! Haha). 😆</p></div></div>
+                <div class="card"><div class="card-media"><video autoplay muted loop playsinline controls><source src="VID-20260611-WA0026.mp4" type="video/mp4"></video></div><div class="card-content"><h3>18. Bukti Nyata Bidadari Tanpa Sayap ✨</h3><p>Fix, malaikat di surga pasti iri liat ciptaan terindah yang lagi ultah hari ini. Makasih ya Bee udah sudi milih buaya bucin kayak aku buat jadi pawang hatimu. 👑❤️</p></div></div>
+                <div class="card"><div class="card-media"><video autoplay muted loop playsinline controls><source src="VID-20260611-WA0027.mp4" type="video/mp4"></video></div><div class="card-content"><h3>19. Selamanya Jadi Ratu Hatiku 👑❤️🐝</h3><p>Selamat ulang tahun sekali lagi, Ratu Bee kesayanganku! Tetap jadi pacar yang gemesin, cerewet, dan sayang sama aku ya. I love you so much, Queen Bee-ku! Sampai jumpa di hari pertemuan kita nanti! ✨🥂</p></div></div>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="nav-buttons">
+                <button id="prev-btn" class="nav-btn">⬅️ Sebelumnya</button>
+                <button id="next-btn" class="nav-btn">Selanjutnya ➡️</button>
+            </div>
+
+            <div class="indicator-wrapper">
+                <span id="slide-indicator" class="indicator">1 / 19</span>
+            </div>
+        </main>
+
+        <footer>
+            <p>Crafted with love for Ratu Bee ✨</p>
         </footer>
-
     </div>
 
-    <!-- Menghubungkan ke script.js eksternal -->
+    <!-- Script Utama -->
     <script src="script.js"></script>
 </body>
 </html>
